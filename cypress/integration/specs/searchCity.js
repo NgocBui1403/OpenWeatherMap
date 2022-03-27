@@ -1,3 +1,5 @@
+import HomePage from '../pageObjects/homePage'
+
 describe('Verify searching for a city', () => {
 
    //TC01-Verify the current date of the searched city
@@ -9,7 +11,7 @@ describe('Verify searching for a city', () => {
    
     it('Verify the current date', () => {
 
-        
+        cy.click();
 
     })
 
