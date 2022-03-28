@@ -45,6 +45,12 @@ describe('Verify searching for a city', () => {
         cy.wait(4000)
         CityPage.getDate().should('contain', curMonth + ' ' + curDay);
 
+        //Verify that temperature
+        CityPage.getTemparature().invoke('text').then((text) => {
+            var splitText = text.split('°C')[0]
+            expect(splitText).to.match(/^[0-9]*$/);           
+        })
+        
     })
     
 
