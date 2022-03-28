@@ -6,7 +6,7 @@ describe('Verify searching for a city', () => {
     const cities = require('../../fixtures/cities')
     cities.forEach((city) => {
     //TC01-Verify that navigating to search page after enter the city's name
-        it('should navigate to search page ${city.name}', () => {
+        it('should navigate to search page ' + city.name, () => {
 
             //Visit: https://openweathermap.org/
             HomePage.visit();
