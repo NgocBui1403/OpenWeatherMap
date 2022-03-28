@@ -4,7 +4,7 @@
         "expected": ["Hanoi, VN","Ha noi, VN", "Ha Noi, VN"]
     },
     {
-        "name": "Hồ Chí Minh",
-        "expected": ["Ho Chi Minh, VN"]
+        "name": "Ho Chi Minh",
+        "expected": ["Ho Chi Minh City, VN", "Thanh pho Ho Chi Minh, VN"]
     }
 ]

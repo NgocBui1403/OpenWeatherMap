@@ -19,7 +19,9 @@ describe('Verify searching for a city', () => {
             cy.url().should('include',  Cypress.config().baseUrl + 'find?q=');
 
             //Verify with the searched keyword has the returned result
-            SearchPage.getNumberResults().should('eq', 1);
+            SearchPage.getNumberResults().then( result => {
+                expect(result).to.be.greaterThan(0)
+            })
 
             //verify the first result link contains the searched keyword
             SearchPage.getTextContentOnLink(1).should('be.oneOf', city.expected);

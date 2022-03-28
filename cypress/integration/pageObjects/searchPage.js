@@ -5,6 +5,7 @@ class SearchPage{
     }
     
     getNumberResults(){
+        cy.wait(4000)
         return cy.get('body')
             .then($body => {
                 if ($body.find('.table').length) {
