@@ -19,7 +19,18 @@
 //
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
+
+Cypress.Commands.add('getCurrentDatea', () => {
+    //Get current day and month
+    const curDate = new Date();
+   
+    const curDay = curDate.getDate();
+    cy.log(curDay);
+    const curMonth = curDate.toLocaleString('default', { month: 'short' });
+    cy.log(curMonth);
+
+    return cy.wrap(curMonth + ' ' + curDay);
+})
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })

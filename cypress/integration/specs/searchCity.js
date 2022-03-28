@@ -37,13 +37,12 @@ describe('Verify searching for a city', () => {
         CityPage.getCityName().should('contain', 'Hanoi');
 
         //Get current day and month
-        const curDate = new Date();
-        const curDay = curDate.getDate();
-        const curMonth = curDate.toLocaleString('default', {month :'short'});
-
-        //Verify the current date
-        cy.wait(4000)
-        CityPage.getDate().should('contain', curMonth + ' ' + curDay);
+        cy.getCurrentDatea().then( curDate => {
+            //Verify the current date
+            cy.wait(4000);
+            CityPage.getDate().should('contain', curDate);
+        });
+        
 
        
 
