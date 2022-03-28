@@ -23,7 +23,7 @@ describe('Verify searching for a city', () => {
 
         //verify the first result link contains the searched keyword
         SearchPage.getTextContentOnLink(1).should('contain', txt);
-    })
+    });
 
     it('should navigate to city page when click on the result link', () => {
 
@@ -45,13 +45,15 @@ describe('Verify searching for a city', () => {
         cy.wait(4000)
         CityPage.getDate().should('contain', curMonth + ' ' + curDay);
 
+       
+
         //Verify that temperature
         CityPage.getTemparature().invoke('text').then((text) => {
             var splitText = text.split('°C')[0]
             expect(splitText).to.match(/^[0-9]*$/);           
         })
         
-    })
+    });
     
 
 })
