@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Hà Nội",
+        "expected": ["Hanoi, VN","Ha noi, VN", "Ha Noi, VN"]
+    },
+    {
+        "name": "Hồ Chí Minh",
+        "expected": ["Ho Chi Minh, VN"]
+    }
+]

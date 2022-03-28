@@ -19,7 +19,7 @@ class SearchPage{
     }
  
     getTextContentOnLink(index){
-        return cy.xpath(`(((//table//tr)[`+ index +`])//a)[1]`).invoke('text');
+        return cy.xpath(`(((//table//tr)[`+ index +`])//a)[1]`).invoke('text').then((text) => { return text.trim(); });
     }
 
     clickTheResultLink(index){

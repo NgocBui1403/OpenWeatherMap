@@ -4,7 +4,7 @@ class CityPage{
     }
 
     getCityName(){
-        return cy.xpath(`//h2`);
+        return cy.xpath(`//h2`).invoke('text').then((text) => { return text.trim();})
     }
 
     getDate(){
