@@ -1,16 +1,27 @@
+import cityPage from '../pageObjects/cityPage';
+
 class HomePage{
+
+    constructor(){
+
+    }
+
     elements = {
-        TXT_SEARCH : () => cy.xpath(`//div[@id='desktop-menu']//input[@name='q']`),
-        BTN_SUBMIT : () => cy.xpath(`//div[@id='desktop-menu']//input[2]`)
+        TXT_SEARCH : () => cy.xpath(`//div[@id='desktop-menu']//input[@name='q']`)
     }
 
     visit() {
         cy.visit('/');
     }
 
-    searchCity(cityName){
+    enter(cityName){
+        cy.wait(4000)
         this.elements.TXT_SEARCH().type(cityName);
-        this.elements.BTN_SUBMIT().click();
+        return this;
+    }
+
+    submit(){
+       this.elements.TXT_SEARCH().type('{enter}');
     }
 
 }

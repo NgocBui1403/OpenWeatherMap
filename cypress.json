@@ -1,3 +1,5 @@
 {
-    "baseUrl": "https://openweathermap.org/"
+    "baseUrl": "https://openweathermap.org/",
+    "viewportWidth": 1280,
+    "viewportHeight": 1024
   }
