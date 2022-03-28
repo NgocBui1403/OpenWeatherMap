@@ -27,5 +27,8 @@ class SearchPage{
         return cy.xpath(`(((//table//tr)[`+ index +`])//a)[1]`).click();
     }
     
+    getAlert(){
+        return cy.xpath(`//div[@class='alert alert-warning']`).invoke('text');
+    }
 }
 module.exports = new SearchPage();
