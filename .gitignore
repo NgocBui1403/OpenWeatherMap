@@ -132,3 +132,4 @@ dist
 cypress/screenshots
 cypress/videos
 mochawesome-report
+package-lock.json
