@@ -37,7 +37,7 @@ describe('Verify searching for a city', () => {
         CityPage.getCityName().should('contain', 'Hanoi');
 
         //Get current day and month
-        cy.getCurrentDatea().then( curDate => {
+        cy.getCurrentDate().then( curDate => {
             //Verify the current date
             cy.wait(4000);
             CityPage.getDate().should('contain', curDate);

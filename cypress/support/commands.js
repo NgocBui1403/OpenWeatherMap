@@ -20,7 +20,7 @@
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 
-Cypress.Commands.add('getCurrentDatea', () => {
+Cypress.Commands.add('getCurrentDate', () => {
     //Get current day and month
     const curDate = new Date();
    
