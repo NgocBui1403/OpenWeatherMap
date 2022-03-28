@@ -8,7 +8,7 @@
 2. Run "npm install" on this repository folder 
 
 ## How to run
-Run command "npm run cy:run:chrome" or "npm run cy:run:firefox" to run all test cases
+Run the command "npm run cy:run:chrome" or "npm run cy:run:firefox" to run all test cases
 
 ## Review result
 View HTML result at "mochawesome-report/mochawesome.html"
