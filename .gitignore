@@ -131,3 +131,4 @@ dist
 
 cypress/screenshots
 cypress/videos
+mochawesome-report
